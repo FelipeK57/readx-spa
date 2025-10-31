@@ -117,7 +117,7 @@ La aplicación ya está configurada para consumir los datos del mock API usando 
 
 1. **`npm run mock`** → Levanta el servidor local que sirve los datos desde `mock.json`.  
 2. **`npm run dev`** → Ejecuta la SPA de React.  
-3. **`example.service.ts`** → Se encarga de obtener los datos con Axios.  
+3. **`users.service.ts`** → Se encarga de obtener los datos con Axios.  
 4. **TanStack Query** → Maneja el fetching, cache y estado de carga.  
 5. **Zustand** → Almacena estado global (por ejemplo, usuario seleccionado).  
 
@@ -128,7 +128,7 @@ La aplicación ya está configurada para consumir los datos del mock API usando 
 Si deseas que las peticiones se vean más realistas, el servicio incluye un pequeño *delay* configurado:
 
 ```ts
-await delay(300);
+await sleep(500);
 ```
 
 Solo ajusta el valor (en milisegundos) según tu necesidad.
@@ -143,20 +143,3 @@ Solo ajusta el valor (en milisegundos) según tu necesidad.
 | **Error CORS o red 404** | Verifica que `VITE_API_URL` en `.env` coincida con el puerto del mock |
 | **json-server no se encuentra** | Ejecuta `npm install -D json-server` |
 | **Datos no aparecen en la app** | Asegúrate de tener el mock corriendo **antes** de `npm run dev` |
-
----
-
-## 🧱 Buenas prácticas incluidas
-
-- 📁 Estructura por *features*, no por tipo de archivo.  
-- 💡 Servicios centralizados y reutilizables.  
-- 🔄 Query Client preconfigurado para data fetching.  
-- 🎨 UI limpia y consistente con Tailwind.  
-- ⚙️ Alias `@` configurado para imports absolutos.  
-
----
-
-## 📜 Licencia
-
-Este proyecto se distribuye bajo licencia **MIT**.  
-Crea, mejora y comparte tu propia experiencia de desarrollo 🚀
