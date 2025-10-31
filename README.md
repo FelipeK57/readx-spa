@@ -28,7 +28,7 @@ Está diseñada para ayudar a escribir código más limpio, modular, y fácil de
 
 ## 🧱 Arquitectura basada en Features
 
-ReaDx usa una **arquitectura por features**, donde cada módulo es autocontenido y tiene:
+Readx usa una **arquitectura por features**, donde cada módulo es autocontenido y tiene:
 
 - Sus **componentes**  
 - Sus **páginas** (views o containers)  
@@ -53,7 +53,7 @@ Esto permite que las features se desarrollen, prueben y mantengan de forma indep
 
 ## 🚀 Ejecución del Proyecto
 
-ReaDx incluye un **servidor mock local** con [`json-server`](https://github.com/typicode/json-server) para simular una API REST, ideal para desarrollo o pruebas locales.
+Readx incluye un **servidor mock local** con [`json-server`](https://github.com/typicode/json-server) para simular una API REST, ideal para desarrollo o pruebas locales.
 
 ---
 
