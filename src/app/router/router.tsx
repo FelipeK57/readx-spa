@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import { MainLayout } from "../components/layout/MainLayout";
 
 // Routes
-import { ReadxPresentation } from "../lib/ReadxPresentatin";
+import { ReadxPresentation } from "../lib/ReadxPresentation";
 import { UsersPage } from "../features/users/pages/UsersPage";
 
 export const RouterProvider = () => {
