@@ -4,7 +4,7 @@ import { RouterProvider } from "./router/router";
 export const App = () => {
   return (
     <QueryProvider>
-      <RouterProvider />;
+      <RouterProvider />
     </QueryProvider>
   );
 };
