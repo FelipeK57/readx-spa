@@ -62,7 +62,8 @@ async function main() {
       process.exit(1);
     }
     await fs.copy(templateDir, dest, {
-      filter: (src) => !src.includes("node_modules") && !src.includes(".git"),
+      overwrite: true,
+      errorOnExist: false,
     });
   } catch (err) {
     console.error(chalk.red(`❌ Error copiando archivos: ${err.message}`));
