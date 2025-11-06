@@ -9,9 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 async function main() {
-  console.log(
-    chalk.cyan("\n🚀 Bienvenido al generador de proyectos Readx!\n")
-  );
+  console.log(chalk.cyan("\n🚀 Bienvenido al generador de proyectos Readx!\n"));
 
   const { projectName } = await inquirer.prompt([
     {
@@ -31,10 +29,6 @@ async function main() {
       message: "Selecciona el tipo de proyecto:",
       choices: [
         { name: "Proyecto Readx SPA (Single Page Application)", value: "spa" },
-        {
-          name: "Proyecto Readx SSR (Server Side Rendering) - Próximamente",
-          value: "ssr",
-        },
       ],
       default: "spa",
     },
