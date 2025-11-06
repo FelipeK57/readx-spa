@@ -1,6 +1,6 @@
 {
   "name": "create-readx-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CLI para crear proyectos React con el setup Readx (Tailwind, TanStack Query, Zustand, Router, Axios)",
   "bin": {
     "create-readx-app": "./bin/cli.js"
