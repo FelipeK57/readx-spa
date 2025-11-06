@@ -4,6 +4,10 @@ import path from "path";
 import inquirer from "inquirer";
 import { fileURLToPath } from "url";
 import chalk from "chalk";
+import process from "process";
+import os from "os";
+
+const cwd = process.env.INIT_CWD || process.cwd();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -20,7 +24,7 @@ async function main() {
     },
   ]);
 
-  const dest = path.resolve(process.cwd(), projectName);
+  const dest = path.resolve(cwd, projectName);
 
   const { type } = await inquirer.prompt([
     {
@@ -35,6 +39,13 @@ async function main() {
   ]);
 
   const templateDir = path.resolve(__dirname, "../templates/", type);
+
+  if (!fs.existsSync(dest)) {
+    console.error(
+      chalk.red(`❌ Error: no se creó la carpeta destino: ${dest}`)
+    );
+    process.exit(1);
+  }
 
   if (fs.existsSync(dest)) {
     console.log(chalk.red(`❌ La carpeta ${projectName} ya existe.`));
