@@ -204,8 +204,8 @@ Solo ajusta el valor (en milisegundos) según tu necesidad.
 
 ## 🧑‍💻 Autor
 
-Desarrollado con 💙 por **Kevin M.**  
+Desarrollado con 💙 por **Kevin B.**  
 > _"Readx nace del deseo de crear proyectos React con una estructura sólida, moderna y profesional desde el primer minuto."_  
 
 📦 [npmjs.com/package/create-readx-app](https://www.npmjs.com/package/create-readx-app)  
-💻 [Repositorio en GitHub (próximamente)](#)
+💻 [Página web (próximamente)](#)
