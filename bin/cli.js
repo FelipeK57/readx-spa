@@ -40,22 +40,22 @@ async function main() {
 
   const templateDir = path.resolve(__dirname, "../templates/", type);
 
+  if (fs.existsSync(dest)) {
+    console.log(chalk.red(`❌ La carpeta ${projectName} ya existe.`));
+    process.exit(1);
+  }
+  
+  console.log(chalk.gray("📦 Copiando archivos..."));
+  await fs.copy(templateDir, dest, {
+    filter: (src) => !src.includes("node_modules") && !src.includes(".git"),
+  });
+
   if (!fs.existsSync(dest)) {
     console.error(
       chalk.red(`❌ Error: no se creó la carpeta destino: ${dest}`)
     );
     process.exit(1);
   }
-
-  if (fs.existsSync(dest)) {
-    console.log(chalk.red(`❌ La carpeta ${projectName} ya existe.`));
-    process.exit(1);
-  }
-
-  console.log(chalk.gray("📦 Copiando archivos..."));
-  await fs.copy(templateDir, dest, {
-    filter: (src) => !src.includes("node_modules") && !src.includes(".git"),
-  });
 
   // Actualiza el nombre del package.json
   const pkgPath = path.join(dest, "package.json");
