@@ -5,6 +5,12 @@
   "bin": {
     "create-readx-app": "./bin/cli.js"
   },
+  "files": [
+    "bin",
+    "templates",
+    "package.json",
+    "README.md"
+  ],
   "type": "module",
   "keywords": ["create", "react", "starter", "template", "readx", "spa", "ssr"],
   "author": "Kevin <orozcokevin57bo@gmail.com>",
