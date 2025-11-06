@@ -45,15 +45,20 @@ async function main() {
     process.exit(1);
   }
 
-  console.log(chalk.gray(`🧭 Template dir: ${templateDir}`));
-  console.log(chalk.gray(`📂 Destino: ${dest}`));
-  console.log(chalk.gray(`👀 Working dir: ${process.cwd()}`));
-  console.log(chalk.gray(`👀 INIT_CWD: ${process.env.INIT_CWD}`));
+  // console.log(chalk.gray(`🧭 Template dir: ${templateDir}`));
+  // console.log(chalk.gray(`📂 Destino: ${dest}`));
+  // console.log(chalk.gray(`👀 Working dir: ${process.cwd()}`));
+  // console.log(chalk.gray(`👀 INIT_CWD: ${process.env.INIT_CWD}`));
 
-  console.log(chalk.gray("📦 Copiando archivos..."));
-  await fs.copy(templateDir, dest, {
-    filter: (src) => !src.includes("node_modules") && !src.includes(".git"),
-  });
+  try {
+    await fs.ensureDir(dest);
+    await fs.copy(templateDir, dest, {
+      filter: (src) => !src.includes("node_modules") && !src.includes(".git"),
+    });
+  } catch (err) {
+    console.error(chalk.red(`❌ Error copiando archivos: ${err.message}`));
+    process.exit(1);
+  }
 
   if (!fs.existsSync(dest)) {
     console.error(
