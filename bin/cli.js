@@ -52,6 +52,15 @@ async function main() {
 
   try {
     await fs.ensureDir(dest);
+    console.log(chalk.blue(`🧭 Template dir: ${templateDir}`));
+    console.log(chalk.blue(`📂 Destino: ${dest}`));
+
+    if (!(await fs.pathExists(templateDir))) {
+      console.error(
+        chalk.red(`❌ La carpeta de template no existe: ${templateDir}`)
+      );
+      process.exit(1);
+    }
     await fs.copy(templateDir, dest, {
       filter: (src) => !src.includes("node_modules") && !src.includes(".git"),
     });
