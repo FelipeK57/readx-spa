@@ -1,6 +1,6 @@
 {
   "name": "create-readx-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI para crear proyectos React con el setup Readx (Tailwind, TanStack Query, Zustand, Router, Axios)",
   "bin": {
     "create-readx-app": "./bin/cli.js"
@@ -12,7 +12,15 @@
     "README.md"
   ],
   "type": "module",
-  "keywords": ["create", "react", "starter", "template", "readx", "spa", "ssr"],
+  "keywords": [
+    "create",
+    "react",
+    "starter",
+    "template",
+    "readx",
+    "spa",
+    "ssr"
+  ],
   "author": "Kevin <orozcokevin57bo@gmail.com>",
   "license": "MIT",
   "dependencies": {
