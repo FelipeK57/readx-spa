@@ -1,9 +1,9 @@
 # ⚛️ Readx – React Developer Experience & Best Practices Starter
 
-**Readx** es una base de proyecto para React + TypeScript enfocada en ofrecer una **excelente experiencia de desarrollo (DX)** y **promover buenas prácticas** desde el primer commit.
+**Readx** es una base de proyecto para **React + TypeScript**, enfocada en ofrecer una **excelente experiencia de desarrollo (DX)** y **promover buenas prácticas** desde el primer commit.
 
 Su objetivo no es ser un framework nuevo, sino una **plantilla profesional y escalable**, que sirva como punto de partida para proyectos reales, aprendizaje o desarrollo freelance.  
-Está diseñada para ayudar a escribir código más limpio, modular, y fácil de mantener a medida que la aplicación crece.
+Está diseñada para ayudar a escribir código más limpio, modular y fácil de mantener a medida que la aplicación crece.
 
 ---
 
@@ -39,6 +39,60 @@ Esto permite que las features se desarrollen, prueben y mantengan de forma indep
 
 ---
 
+## 🧩 Instalación del CLI
+
+Puedes crear un nuevo proyecto Readx de forma global o con `npx`.
+
+### Opción 1 — Usar `npx` (recomendada)
+
+```bash
+npx create-readx-app@latest
+```
+
+Esto iniciará un asistente interactivo donde podrás elegir:
+
+- 📦 El nombre del proyecto  
+- ⚙️ El tipo de proyecto (por ahora: **SPA con Vite + React + TS**)  
+
+---
+
+### Opción 2 — Instalar globalmente
+
+```bash
+npm install -g create-readx-app
+```
+
+Luego ejecuta:
+
+```bash
+create-readx-app
+```
+
+---
+
+## 🏗️ Estructura generada
+
+```bash
+my-readx-app/
+├── public/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   ├── features/
+│   │   ├── lib/
+│   │   ├── providers/
+│   │   ├── router/
+│   │   ├── stores/
+│   │   └── main.tsx
+│   └── styles/
+├── mock.json
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
+```
+
+---
+
 ## 🚀 Stack Tecnológico
 
 | Tecnología | Propósito | Enlace |
@@ -50,6 +104,8 @@ Esto permite que las features se desarrollen, prueben y mantengan de forma indep
 | 🔁 **TanStack Query** | Manejo de fetch y cache de datos | [tanstack.com/query](https://tanstack.com/query/latest) |
 | 💾 **Zustand** | Estado global simple | [zustand-demo.pmnd.rs](https://zustand-demo.pmnd.rs/) |
 | 🎨 **Tailwind CSS** | Estilos rápidos | [tailwindcss.com](https://tailwindcss.com/) |
+
+---
 
 ## 🚀 Ejecución del Proyecto
 
@@ -135,7 +191,7 @@ Solo ajusta el valor (en milisegundos) según tu necesidad.
 
 ---
 
-### 💡 Problemas comunes
+## 💡 Problemas comunes
 
 | Problema | Solución |
 |-----------|-----------|
@@ -143,3 +199,13 @@ Solo ajusta el valor (en milisegundos) según tu necesidad.
 | **Error CORS o red 404** | Verifica que `VITE_API_URL` en `.env` coincida con el puerto del mock |
 | **json-server no se encuentra** | Ejecuta `npm install -D json-server` |
 | **Datos no aparecen en la app** | Asegúrate de tener el mock corriendo **antes** de `npm run dev` |
+
+---
+
+## 🧑‍💻 Autor
+
+Desarrollado con 💙 por **Kevin M.**  
+> _"Readx nace del deseo de crear proyectos React con una estructura sólida, moderna y profesional desde el primer minuto."_  
+
+📦 [npmjs.com/package/create-readx-app](https://www.npmjs.com/package/create-readx-app)  
+💻 [Repositorio en GitHub (próximamente)](#)
